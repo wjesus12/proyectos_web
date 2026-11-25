@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wilmer Paucar · Portafolio de proyectos | BI, automatización con IA y procesos</title>
+<meta name="description" content="Portafolio de Wilmer Jesús Paucar Ayquipa, Ingeniero Industrial (UNI): dashboards de BI, soluciones web para negocio y plataformas de formación construidas con IA agéntica.">
+<meta property="og:title" content="Wilmer Paucar · Portafolio de proyectos">
+<meta property="og:description" content="Dashboards de BI, automatización con IA y soluciones web para negocio.">
+<meta property="og:image" content="img/wilmer-paucar.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1F3A'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='800' font-size='26' fill='%2300A86B' text-anchor='middle'%3EWP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B1F3A; --navy-2:#132B4F; --blue:#1E56D9; --blue-2:#2F6BF0; --blue-soft:#EAF1FE;
+  --ink:#0B0F17; --text:#1F2937; --muted:#5B6678; --line:#E3E8EF; --bg:#FFFFFF; --bg-2:#F6F8FB;
+  --jade:#00A878; --jade-2:#00C08B; --jade-soft:#E3F6EF;
+  --radius:16px; --shadow:0 1px 2px rgba(11,31,58,.06),0 8px 24px rgba(11,31,58,.08);
+  --shadow-lg:0 2px 4px rgba(11,31,58,.06),0 18px 40px rgba(11,31,58,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',system-ui,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+:focus-visible{outline:3px solid var(--jade);outline-offset:3px;border-radius:6px}
+
+/* ---------- Botones ---------- */
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.92rem;padding:12px 20px;border-radius:10px;border:1.5px solid transparent;transition:transform .15s,background .2s,box-shadow .2s,border-color .2s;cursor:pointer;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 6px 16px rgba(30,86,217,.25)}
+.btn-primary:hover{background:var(--blue-2)}
+.btn-jade{background:var(--jade);color:#fff;box-shadow:0 6px 16px rgba(0,168,120,.25)}
+.btn-jade:hover{background:var(--jade-2)}
+.btn-outline{border-color:var(--line);color:var(--ink);background:#fff}
+.btn-outline:hover{border-color:var(--navy)}
+.btn-linkedin{background:#0A66C2;color:#fff;box-shadow:0 6px 16px rgba(10,102,194,.28)}
+.btn-linkedin:hover{background:#0B74DB}
+
+/* ---------- Header ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+.brand img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--jade)}
+.brand small{display:block;font-weight:600;font-size:.72rem;color:var(--muted);letter-spacing:.02em}
+.nav ul{display:flex;list-style:none;gap:28px;font-weight:600;font-size:.9rem;color:var(--muted)}
+.nav ul a:hover{color:var(--blue)}
+.nav .btn{padding:10px 16px}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;padding:72px 0 64px}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(600px 300px at 85% 10%,rgba(30,86,217,.08),transparent 70%),
+  radial-gradient(500px 260px at 5% 90%,rgba(0,168,120,.08),transparent 70%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--jade);background:var(--jade-soft);padding:7px 12px;border-radius:999px}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--jade);box-shadow:0 0 0 4px rgba(0,168,120,.18)}
+h1{font-size:clamp(2.1rem,4.4vw,3.35rem);line-height:1.08;font-weight:800;color:var(--ink);letter-spacing:-.025em;margin:18px 0 14px}
+h1 span{color:var(--blue)}
+.role{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:14px}
+.role b{color:var(--jade)}
+.lead{font-size:1.02rem;color:var(--muted);max-width:560px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.stats{display:flex;gap:34px;margin-top:38px;padding-top:26px;border-top:1px solid var(--line)}
+.stat strong{display:block;font-size:1.9rem;font-weight:800;color:var(--ink);line-height:1}
+.stat strong em{font-style:normal;color:var(--jade)}
+.stat span{font-size:.8rem;font-weight:600;color:var(--muted)}
+
+.photo-card{position:relative;justify-self:center;width:100%;max-width:400px}
+.photo-card .frame{position:relative;border-radius:24px;overflow:hidden;background:var(--navy);box-shadow:var(--shadow-lg);aspect-ratio:4/5}
+.photo-card .frame img{width:100%;height:100%;object-fit:cover}
+.photo-card .frame::after{content:"";position:absolute;inset:auto 0 0 0;height:38%;background:linear-gradient(transparent,rgba(11,31,58,.85))}
+.photo-card .caption{position:absolute;left:20px;right:20px;bottom:18px;z-index:2;color:#fff}
+.photo-card .caption strong{display:block;font-size:1.02rem;font-weight:800}
+.photo-card .caption span{font-size:.8rem;font-weight:500;opacity:.85}
+.photo-card .accent{position:absolute;inset:-14px -14px auto auto;width:120px;height:120px;border-radius:24px;background:var(--jade);z-index:-1}
+.photo-card .accent-2{position:absolute;inset:auto auto -14px -14px;width:90px;height:90px;border-radius:20px;border:3px solid var(--blue);z-index:-1}
+.li-badge{position:absolute;top:18px;left:-18px;z-index:3;display:flex;align-items:center;gap:10px;background:#fff;border-radius:14px;padding:10px 14px 10px 10px;box-shadow:var(--shadow-lg);font-size:.8rem;font-weight:700;color:var(--ink);transition:transform .2s}
+.li-badge:hover{transform:translateY(-2px)}
+.li-badge .li-ico{width:34px;height:34px;border-radius:8px;background:#0A66C2;display:grid;place-items:center}
+.li-badge .li-ico svg{width:18px;height:18px;fill:#fff}
+.li-badge small{display:block;font-weight:600;color:var(--jade);font-size:.72rem}
+
+/* ---------- Secciones ---------- */
+section{padding:84px 0}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:34px}
+.kicker{font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--jade)}
+h2{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:800;color:var(--ink);letter-spacing:-.02em;line-height:1.15;margin-top:6px}
+.section-head p{color:var(--muted);max-width:520px;margin-top:8px}
+
+/* ---------- Filtros ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:.84rem;font-weight:700;padding:9px 15px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--muted);cursor:pointer;transition:all .2s}
+.chip:hover{border-color:var(--navy);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.chip span{opacity:.6;margin-left:4px}
+
+/* ---------- Tarjetas ---------- */
+#proyectos{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.card[hidden]{display:none}
+.thumb{position:relative;display:block;background:var(--navy);border-bottom:1px solid var(--line)}
+.thumb .bar{display:flex;align-items:center;gap:6px;height:28px;padding:0 12px;background:#EEF2F7}
+.thumb .bar i{width:9px;height:9px;border-radius:50%;background:#CBD3DF}
+.thumb .bar i:first-child{background:#F87171}.thumb .bar i:nth-child(2){background:#FBBF24}.thumb .bar i:nth-child(3){background:var(--jade)}
+.thumb .bar span{margin-left:8px;font-size:.66rem;font-weight:600;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.thumb .shot{aspect-ratio:16/10;overflow:hidden}
+.thumb .shot img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .5s}
+.card:hover .thumb .shot img{transform:scale(1.04)}
+.badge{position:absolute;top:40px;left:12px;font-size:.7rem;font-weight:800;letter-spacing:.03em;padding:5px 10px;border-radius:999px;background:var(--navy);color:#fff;box-shadow:0 4px 10px rgba(0,0,0,.18)}
+.badge.bi{background:var(--blue)}.badge.neg{background:var(--jade)}.badge.edu{background:var(--ink)}
+.card-body{display:flex;flex-direction:column;flex:1;padding:20px 20px 22px}
+.card h3{font-size:1.08rem;font-weight:800;color:var(--ink);line-height:1.3}
+.card .sub{font-size:.78rem;font-weight:700;color:var(--blue);margin:4px 0 10px}
+.card p{font-size:.88rem;color:var(--muted)}
+.hl{list-style:none;margin:14px 0 16px;display:grid;gap:7px}
+.hl li{display:flex;gap:9px;font-size:.82rem;font-weight:600;color:var(--text);line-height:1.4}
+.hl li::before{content:"";flex:none;width:16px;height:16px;margin-top:1px;border-radius:50%;background:var(--jade-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300A878' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/10px no-repeat}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-bottom:18px}
+.tags span{font-size:.7rem;font-weight:700;padding:4px 9px;border-radius:6px;background:var(--blue-soft);color:var(--navy-2)}
+.actions{display:flex;gap:8px;padding-top:16px;border-top:1px dashed var(--line)}
+.actions .btn{flex:1;justify-content:center;padding:11px 12px;font-size:.84rem}
+.actions .btn-outline{flex:0 0 auto}
+.private{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:700;color:var(--muted);padding:0 6px}
+.private svg{width:15px;height:15px}
+
+/* ---------- Perfil ---------- */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.about p{color:var(--muted);margin-bottom:14px}
+.about p strong{color:var(--ink)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.fact{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:#fff}
+.fact small{display:block;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--jade)}
+.fact strong{font-size:.9rem;color:var(--ink);font-weight:700;line-height:1.35;display:block;margin-top:3px}
+.skills{background:var(--navy);color:#fff;border-radius:20px;padding:30px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.skills::after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(0,168,120,.35),transparent 70%)}
+.skills h3{font-size:1.05rem;font-weight:800;margin-bottom:18px}
+.sk-group{margin-bottom:18px;position:relative;z-index:1}
+.sk-group small{display:block;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--jade-2);margin-bottom:8px}
+.sk-group div{display:flex;flex-wrap:wrap;gap:7px}
+.sk-group span{font-size:.78rem;font-weight:600;padding:6px 11px;border-radius:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
+.certs{list-style:none;display:grid;gap:9px;position:relative;z-index:1}
+.certs li{display:flex;gap:10px;align-items:flex-start;font-size:.82rem;font-weight:600;line-height:1.4}
+.certs li::before{content:"";flex:none;width:8px;height:8px;margin-top:6px;border-radius:2px;background:var(--jade-2);transform:rotate(45deg)}
+.certs li em{font-style:normal;opacity:.65;font-weight:500}
+
+/* ---------- CTA final ---------- */
+.cta{background:var(--ink);color:#fff;padding:72px 0}
+.cta-box{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center}
+.cta h2{color:#fff}
+.cta h2 span{color:var(--jade-2)}
+.cta p{color:#A9B4C6;margin-top:12px;max-width:560px}
+.cta-actions{display:flex;flex-direction:column;gap:12px}
+.cta-actions .btn{justify-content:center;padding:15px 20px;font-size:.95rem}
+.cta .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.25)}
+.cta .btn-outline:hover{border-color:#fff}
+footer{background:var(--ink);color:#76839A;font-size:.8rem;border-top:1px solid rgba(255,255,255,.08);padding:22px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:#C7D0DD;font-weight:600}
+footer a:hover{color:var(--jade-2)}
+
+/* Botón flotante LinkedIn */
+.li-float{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:10px;background:#0A66C2;color:#fff;font-weight:700;font-size:.86rem;padding:12px 18px 12px 12px;border-radius:999px;box-shadow:0 10px 28px rgba(10,102,194,.4);transition:transform .2s}
+.li-float:hover{transform:translateY(-2px)}
+.li-float .li-ico{width:30px;height:30px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.li-float svg{width:16px;height:16px;fill:#0A66C2}
+
+/* Animación de entrada */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1020px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .photo-card{max-width:340px}
+  .about,.cta-box{grid-template-columns:1fr}
+}
+@media (max-width:680px){
+  .nav ul{display:none}
+  .brand small{display:none}
+  .nav .btn{padding:9px 13px;font-size:.84rem}
+  .grid{grid-template-columns:1fr}
+  .stats{gap:22px}
+  .stat strong{font-size:1.55rem}
+  .facts{grid-template-columns:1fr}
+  section{padding:64px 0}
+  .hero{padding:48px 0}
+  .li-float .txt{display:none}
+  .li-float{padding:12px}
+  .li-badge{left:-6px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio" aria-label="Inicio">
+      <img src="img/wilmer-avatar.webp" alt="">
+      <span>Wilmer Paucar<small>BI · Automatización con IA · Procesos</small></span>
+    </a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#perfil">Perfil</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-linkedin" href="https://www.linkedin.com/in/wilmerjesuspaucar/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      Conectemos
+    </a>
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <span class="eyebrow"><i></i> Disponible para nuevos retos · Lima, Perú</span>
+        <h1>Wilmer Jesús <span>Paucar Ayquipa</span></h1>
+        <p class="role">Analista de BI · Automatización con IA · <b>Mejora de procesos</b></p>
+        <p class="lead">Ingeniero Industrial (UNI) con 3+ años en analítica comercial, calidad y datos. Convierto datos dispersos en tableros que ayudan a decidir, y automatizo procesos con IA agéntica sin perder el criterio de negocio.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#proyectos">
+            Ver proyectos
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </a>
+          <a class="btn btn-linkedin" href="https://www.linkedin.com/in/wilmerjesuspaucar/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            Ver mi perfil en LinkedIn
+          </a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong data-count="9">9</strong><span>proyectos en línea</span></div>
+          <div class="stat"><strong><em>3</em></strong><span>dashboards de negocio</span></div>
+          <div class="stat"><strong>3+</strong><span>años de experiencia</span></div>
+        </div>
+      </div>
+
+      <div class="photo-card reveal">
+        <span class="accent" aria-hidden="true"></span>
+        <span class="accent-2" aria-hidden="true"></span>
+        <a class="li-badge" href="https://www.linkedin.com/in/wilmerjesuspaucar/" target="_blank" rel="noopener">
+          <span class="li-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></span>
+          <span>Conectemos en LinkedIn<small>/in/wilmerjesuspaucar</small></span>
+        </a>
+        <div class="frame">
+          <img src="img/wilmer-paucar.webp" alt="Wilmer Jesús Paucar Ayquipa, Ingeniero Industrial" width="960" height="1200">
+          <div class="caption">
+            <strong>Coordinador de Calidad y Analítica de Datos</strong>
+            <span>Ingeniero Industrial · UNI (quinto superior)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROYECTOS ================= -->
+  <section id="proyectos">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Portafolio</span>
+          <h2>Proyectos publicados</h2>
+          <p>Cada proyecto está en línea. Ábrelo y navégalo tal como lo usaría un cliente o un equipo.</p>
+        </div>
+        <div class="filters" role="group" aria-label="Filtrar proyectos">
+          <button class="chip" data-filter="all" aria-pressed="true">Todos<span></span></button>
+          <button class="chip" data-filter="bi" aria-pressed="false">Dashboards y BI<span></span></button>
+          <button class="chip" data-filter="neg" aria-pressed="false">Soluciones para negocio<span></span></button>
+          <button class="chip" data-filter="edu" aria-pressed="false">Plataformas de formación<span></span></button>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <!-- ================= PERFIL ================= -->
+  <section id="perfil">
+    <div class="wrap about">
+      <div class="reveal">
+        <span class="kicker">Sobre mí</span>
+        <h2>Datos, procesos e IA con criterio de negocio</h2>
+        <p style="margin-top:16px">Soy <strong>Ingeniero Industrial por la UNI</strong>. Empecé en el área comercial de Gaceta Jurídica, donde pasé de practicante a <strong>analista comercial</strong>, y hoy soy <strong>Coordinador de Calidad y Analítica de Datos</strong> en un instituto de educación superior 100 % virtual, donde también enseño Estadística y Matemática Financiera.</p>
+        <p>Mi trabajo une tres cosas: <strong>tableros de BI</strong> que responden preguntas concretas, <strong>automatizaciones</strong> que le quitan horas operativas a los equipos y <strong>agentes de IA</strong> aplicados a procesos reales, con gobierno de datos y de IA de por medio.</p>
+        <div class="facts">
+          <div class="fact"><small>Formación</small><strong>Ingeniería Industrial · UNI, quinto superior</strong></div>
+          <div class="fact"><small>Rol actual</small><strong>Coordinador de Calidad y Analítica de Datos</strong></div>
+          <div class="fact"><small>Enfoque</small><strong>BI comercial, automatización y procesos</strong></div>
+          <div class="fact"><small>Ubicación</small><strong>Lima, Perú · presencial o híbrido</strong></div>
+        </div>
+      </div>
+
+      <aside class="skills reveal" aria-label="Habilidades y certificaciones">
+        <h3>Herramientas</h3>
+        <div class="sk-group"><small>BI y análisis</small><div><span>Power BI</span><span>Looker Studio</span><span>Excel avanzado</span><span>SQL</span><span>Python</span></div></div>
+        <div class="sk-group"><small>Automatización e IA</small><div><span>n8n</span><span>Claude Code</span><span>Gemini</span><span>Google Apps Script</span><span>Google Workspace</span></div></div>
+        <div class="sk-group"><small>Gestión</small><div><span>Mejora de procesos</span><span>Gobierno de datos</span><span>Gobierno de IA</span><span>KPIs</span></div></div>
+        <h3 style="margin-top:24px">Certificaciones</h3>
+        <ul class="certs">
+          <li><span>AI Agent Manager (AIAM) <em>· CertiProf</em></span></li>
+          <li><span>ISO 42001 AI Governance Fundamentals <em>· CertiProf</em></span></li>
+          <li><span>Gemini Certified Educator y Gemini Certified Faculty <em>· Google for Education</em></span></li>
+          <li><span>Google Certified Educator Nivel 1 y Nivel 2 <em>· Google for Education</em></span></li>
+          <li><span>Claude Code in Action, AI Fluency y otros cursos <em>· Anthropic Academy</em></span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta" id="contacto">
+    <div class="wrap cta-box">
+      <div class="reveal">
+        <span class="kicker">Contacto</span>
+        <h2>¿Buscas un analista que convierta datos en <span>decisiones</span>?</h2>
+        <p>Escríbeme por LinkedIn. Con gusto te cuento cómo construí cualquiera de estos proyectos y qué resultados podría llevar a tu equipo.</p>
+      </div>
+      <div class="cta-actions reveal">
+        <a class="btn btn-linkedin" href="https://www.linkedin.com/in/wilmerjesuspaucar/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          Contáctame en LinkedIn
+        </a>
+        <a class="btn btn-outline" href="https://github.com/wjesus12" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.7-2.8 5.7-5.5 6 .5.4.9 1.1.9 2.3v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+          Ver mi código en GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> Wilmer Jesús Paucar Ayquipa · Lima, Perú</span>
+    <span><a href="https://www.linkedin.com/in/wilmerjesuspaucar/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/wjesus12" target="_blank" rel="noopener">GitHub</a></span>
+  </div>
+</footer>
+
+<a class="li-float" href="https://www.linkedin.com/in/wilmerjesuspaucar/" target="_blank" rel="noopener" aria-label="Conectemos en LinkedIn">
+  <span class="li-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></span>
+  <span class="txt">Conectemos en LinkedIn</span>
+</a>
+
+<script>
+/* =====================================================================
+   PROYECTOS — para agregar uno nuevo, copia un bloque y edítalo.
+   cat: "bi" | "neg" | "edu"   ·   code: URL de GitHub o null si es privado
+   ===================================================================== */
+const PROYECTOS = [
+  {
+    cat:"bi", titulo:"Centro de Inteligencia Multisede", sub:"Club El Tumi · propuesta de dashboard comercial",
+    desc:"Tablero comercial para cuatro sedes (Lima, Chiclayo, Ica y Tarapoto) con gobierno de datos e IA integrados.",
+    hl:["9 pestañas: facturación, cobranza, socios, temporadas y más","2,000 registros simulados × 31 columnas con incidencias de calidad","Pronóstico con IA a 3 meses y panel de gobernanza (Ley 29733)"],
+    tags:["Dashboard BI","Gobierno de datos","IA","Google Sheets"],
+    img:"img/tumi-dashboard-multisede.webp", demo:"https://controltumi-jesuspaucar.netlify.app/", code:"https://github.com/wjesus12/tumi-dashboard-multisede"
+  },
+  {
+    cat:"bi", titulo:"Centro de Control de Ventas, Facturación y Cobranzas", sub:"Prosegur Alarmas · caso de muestra",
+    desc:"Resumen ejecutivo para seguir ventas, facturación y cobranzas, con filtros por servicio, segmento, ubicación y estado de cartera.",
+    hl:["Seis vistas: resumen, ventas, facturación, cobranzas, calidad de datos y automatización","Alertas de deuda vencida y saldos altos","Panel de calidad de datos para confiar en las cifras"],
+    tags:["Dashboard BI","Cobranzas","Calidad de datos"],
+    img:"img/prosegur-dashboard-jp.webp", demo:"https://prosegur-dashboard-jp.netlify.app/", code:null
+  },
+  {
+    cat:"bi", titulo:"Panel de Gestión de Tutores", sub:"Instituto de educación superior virtual · uso real",
+    desc:"Tablero de retención estudiantil para coordinación y tutores, alimentado desde Google Sheets.",
+    hl:["Riesgo crítico y potencial por tutor, eficiencia y contactabilidad","Filtros por tutor, programa, ciclo y estado","Bitácora de seguimiento registrada por los propios tutores"],
+    tags:["Dashboard BI","Retención","Google Sheets"],
+    img:"img/dashboard-2026isat.webp", demo:"https://dashboard-2026isat.netlify.app/", code:null
+  },
+  {
+    cat:"neg", titulo:"Galarza Centro Dental", sub:"Portal de reservas y consola de la doctora",
+    desc:"Sitio para una clínica dental con reservas en línea las 24 horas y una consola interna para gestionar la agenda.",
+    hl:["Reserva por servicio, fecha y hora con confirmación por correo","Consulta de citas por DNI y contacto urgente por WhatsApp","Google Sheets como base de datos vía Apps Script"],
+    tags:["Web para cliente","Apps Script","Google Sheets"],
+    img:"img/galarza-centro-dental.webp", demo:"https://dental-galarza.netlify.app/", code:null
+  },
+  {
+    cat:"edu", titulo:"Aprendiendo con IA", sub:"Guía práctica de Google Gemini",
+    desc:"Portal gratuito para aprender Gemini desde cero y prepararse para las certificaciones de Google for Education.",
+    hl:["32 módulos, 155 términos de glosario y 366 preguntas de práctica","Simulacros Educator y Faculty de 37 preguntas","Todo el contenido en ES, EN o EN+ES"],
+    tags:["E-learning","Gemini","JavaScript"],
+    img:"img/aprendiendo-con-ia.webp", demo:"https://aprendiendo-con-ia.netlify.app/", code:"https://github.com/wjesus12/aprendiendo-con-ia"
+  },
+  {
+    cat:"edu", titulo:"Claude Architect Foundations", sub:"Entrenamiento para la certificación CCAR-F",
+    desc:"Portal con forma de consola para preparar la certificación de arquitectura con Claude, de modelos a agentes y MCP.",
+    hl:["26 módulos y banco de 200 preguntas","Simulacro de 60 preguntas con puntuación de 100 a 1000","25 labs de diagnóstico y 150 flashcards con repetición espaciada"],
+    tags:["E-learning","IA agéntica","JavaScript"],
+    img:"img/claude-architect-foundations.webp", demo:"https://claudefoundationscourse.netlify.app/", code:"https://github.com/wjesus12/claude-architect-foundations"
+  },
+  {
+    cat:"edu", titulo:"PL-300 Ready", sub:"Preparación para Power BI Data Analyst (PL-300)",
+    desc:"Aplicación para medir la preparación rumbo al PL-300, detectar brechas y recomendar qué estudiar.",
+    hl:["18 módulos y 57 lecciones de Power BI","Simuladores y micro-simulacros con preguntas originales","Progreso por usuario, tema claro y oscuro"],
+    tags:["Power BI","E-learning","JavaScript"],
+    img:"img/PL300ready.webp", demo:"https://pl-300-ready-jesus-paucar.netlify.app/", code:"https://github.com/wjesus12/PL300ready"
+  },
+  {
+    cat:"edu", titulo:"DataCert SQL", sub:"SQL para DP-900, Oracle 1Z0-071 y DataCamp",
+    desc:"Portal para dominar SQL con un laboratorio que ejecuta consultas reales sobre datasets de negocio.",
+    hl:["Motor SQL multi-dialecto: T-SQL, Oracle y PostgreSQL","9 datasets: ventas, banco, logística, RR. HH. y más","140 preguntas de simulacro para tres certificaciones"],
+    tags:["SQL","E-learning","JavaScript"],
+    img:"img/datacert-sql.webp", demo:"https://datacert-sql-jp.netlify.app/", code:"https://github.com/wjesus12/datacert-sql"
+  },
+  {
+    cat:"edu", titulo:"Shopify Expert", sub:"Gestión de tiendas Shopify",
+    desc:"Ruta guiada para aprender a administrar una tienda Shopify, con práctica aplicada y autoevaluaciones.",
+    hl:["Ruta de aprendizaje con lecciones guiadas","Laboratorio Shopify para practicar","Autoevaluaciones con explicación detallada"],
+    tags:["E-commerce","E-learning"],
+    img:"img/shopify-expert-jp.webp", demo:"https://shopify-expert-jp.netlify.app/", code:null
+  }
+];
+
+const CAT = {bi:"Dashboard y BI", neg:"Solución para negocio", edu:"Plataforma de formación"};
+const ico = {
+  ext:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>',
+  gh:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.7-2.8 5.7-5.5 6 .5.4.9 1.1.9 2.3v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>',
+  lock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>'
+};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const host = u => u.replace(/^https?:\/\//,"").replace(/\/$/,"");
+
+document.getElementById("grid").innerHTML = PROYECTOS.map(p => `
+  <article class="card reveal" data-cat="${p.cat}">
+    <a class="thumb" href="${p.demo}" target="_blank" rel="noopener" aria-label="Abrir ${esc(p.titulo)}">
+      <div class="bar"><i></i><i></i><i></i><span>${host(p.demo)}</span></div>
+      <div class="shot"><img src="${p.img}" alt="Vista de ${esc(p.titulo)}"></div>
+      <span class="badge ${p.cat}">${CAT[p.cat]}</span>
+    </a>
+    <div class="card-body">
+      <h3>${esc(p.titulo)}</h3>
+      <div class="sub">${esc(p.sub)}</div>
+      <p>${esc(p.desc)}</p>
+      <ul class="hl">${p.hl.map(h => `<li>${esc(h)}</li>`).join("")}</ul>
+      <div class="tags">${p.tags.map(t => `<span>${esc(t)}</span>`).join("")}</div>
+      <div class="actions">
+        <a class="btn btn-jade" href="${p.demo}" target="_blank" rel="noopener">Ver proyecto ${ico.ext}</a>
+        ${p.code
+          ? `<a class="btn btn-outline" href="${p.code}" target="_blank" rel="noopener" aria-label="Código de ${esc(p.titulo)} en GitHub">${ico.gh} Código</a>`
+          : `<span class="private" title="Código en repositorio privado">${ico.lock} Código privado</span>`}
+      </div>
+    </div>
+  </article>`).join("");
+
+/* Contadores en filtros */
+document.querySelectorAll(".chip").forEach(ch => {
+  const f = ch.dataset.filter;
+  ch.querySelector("span").textContent = f === "all" ? PROYECTOS.length : PROYECTOS.filter(p => p.cat === f).length;
+  ch.addEventListener("click", () => {
+    document.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c === ch));
+    document.querySelectorAll(".card").forEach(c => { c.hidden = f !== "all" && c.dataset.cat !== f; });
+  });
+});
+
+/* Animación al hacer scroll */
+const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+}), {threshold:.12}) : null;
+document.querySelectorAll(".reveal").forEach(el => io ? io.observe(el) : el.classList.add("in"));
+document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
