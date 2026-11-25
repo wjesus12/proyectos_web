@@ -74,10 +74,11 @@ h1 span{color:var(--blue)}
 .photo-card{position:relative;justify-self:center;width:100%;max-width:400px}
 .photo-card .frame{position:relative;border-radius:24px;overflow:hidden;background:var(--navy);box-shadow:var(--shadow-lg);aspect-ratio:4/5}
 .photo-card .frame img{width:100%;height:100%;object-fit:cover}
-.photo-card .frame::after{content:"";position:absolute;inset:auto 0 0 0;height:38%;background:linear-gradient(transparent,rgba(11,31,58,.85))}
+.photo-card .frame::after{content:"";position:absolute;inset:auto 0 0 0;height:42%;background:linear-gradient(transparent,rgba(11,31,58,.9))}
 .photo-card .caption{position:absolute;left:20px;right:20px;bottom:18px;z-index:2;color:#fff}
-.photo-card .caption strong{display:block;font-size:1.02rem;font-weight:800}
-.photo-card .caption span{font-size:.8rem;font-weight:500;opacity:.85}
+.photo-card .caption .tag-ia{display:inline-block;font-style:normal;font-size:.66rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:rgba(0,168,120,.9);padding:4px 9px;border-radius:999px;margin-bottom:8px}
+.photo-card .caption strong{display:block;font-size:.95rem;font-weight:800;line-height:1.3}
+.photo-card .caption span{display:block;margin-top:3px;font-size:.76rem;font-weight:500;opacity:.85}
 .photo-card .accent{position:absolute;inset:-14px -14px auto auto;width:120px;height:120px;border-radius:24px;background:var(--jade);z-index:-1}
 .photo-card .accent-2{position:absolute;inset:auto auto -14px -14px;width:90px;height:90px;border-radius:20px;border:3px solid var(--blue);z-index:-1}
 .li-badge{position:absolute;top:18px;left:-18px;z-index:3;display:flex;align-items:center;gap:10px;background:#fff;border-radius:14px;padding:10px 14px 10px 10px;box-shadow:var(--shadow-lg);font-size:.8rem;font-weight:700;color:var(--ink);transition:transform .2s}
@@ -251,15 +252,12 @@ footer a:hover{color:var(--jade-2)}
       <div class="photo-card reveal">
         <span class="accent" aria-hidden="true"></span>
         <span class="accent-2" aria-hidden="true"></span>
-        <a class="li-badge" href="https://www.linkedin.com/in/wilmerjesuspaucar/" target="_blank" rel="noopener">
-          <span class="li-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></span>
-          <span>Conectemos en LinkedIn<small>/in/wilmerjesuspaucar</small></span>
-        </a>
         <div class="frame">
           <img src="img/wilmer-paucar.webp" alt="Wilmer Jesús Paucar Ayquipa, Ingeniero Industrial" width="960" height="1200">
           <div class="caption">
+            <em class="tag-ia">Especialista en IA aplicada</em>
             <strong>Coordinador de Calidad y Analítica de Datos</strong>
-            <span>Ingeniero Industrial · UNI (quinto superior)</span>
+            <span>Ingeniero Industrial · UNI · quinto superior</span>
           </div>
         </div>
       </div>
